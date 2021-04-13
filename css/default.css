@@ -1,0 +1,519 @@
+@charset "utf-8";
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/*
+ * default.css
+ */
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		default
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#_body, #_root {
+    top:0;
+    left:0;
+    right:0;
+    margin:auto;
+    text-align:center;
+	/* アンカーリンク周辺の点線を消す */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    /*pointer-events: none;*//*クリック禁止*/
+}
+
+canvas {
+    display:none; /* for firefox*/
+}
+.iframe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display:none; /* for firefox*/
+    //visibility:hidden;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.center {
+    display:table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		a link
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+a:link {color:#DD8080}
+a:hover {color:#00FF00}
+a:active {color:#FFFFFF}
+a:visited {color:#DD3030}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		Button
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+.report {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #008;
+    border: 1px solid #222;
+    outline: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 0;
+    /* width: 50px; // for large img */
+    /* height: 28px;// for large img */
+    /* #38x18 */
+    width: 42px;
+    height: 20px;
+    cursor:pointer;
+    vertical-align: middle;
+    text-align:center;
+    opacity: 0.4;
+}
+.report:hover {
+    background-color: #bf0404;
+    opacity: 1.0;
+}
+.report:disabled {
+    background-color: #333;
+    opacity: 0.2;
+}
+.report img{
+    display: inline-block;
+}
+
+/* input[type=button],input[type=submit] { */
+.b0 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #069;
+    background: -moz-linear-gradient(top,#80CCE6,#80CCE6 5%,#09C 5%,#069 95%,#069 95%,#00293D);
+    background: -webkit-gradient(linear, left top, left bottom, from(#80CCE6), color-stop(0.05,#80CCE6), color-stop(0.05,#09C), color-stop(0.95,#069), color-stop(0.95,#00293D), to(#00293D));
+    border: 1px solid #DDD;
+    outline: none;
+    color: #FFF;
+    /*	width: 100px; */
+	font-size: 16px;
+	font-weight: bold;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 10px 30px;
+    margin: 0px 2px 2px 0px; /*上 右 下 左*/
+    height: 45px;
+    cursor:pointer;
+    vertical-align: middle;
+#    opacity: 0.8;
+    opacity: 0.7;
+}
+/*input[type=button]:focus,input[type=submit]:focus {*/
+.b0:focus {
+    opacity: 0.95;
+    background-color: #039;
+	background: -moz-linear-gradient(top,#80CCE6,#80CCE6 5%,#09C 5%,#039 95%,#039 95%,#00293D);
+	background: -webkit-gradient(linear, left top, left bottom, from(#80CCE6), color-stop(0.05,#80CCE6), color-stop(0.05,#09C), color-stop(0.95,#039), color-stop(0.95,#00293D), to(#00293D));
+    // box-shadow: 0 0 0 3px #aaf inset;
+	/* border: 3px solid #AAF; */
+}
+/*input[type=button]:hover,input[type=submit]:hover {*/
+.b0:hover {
+    opacity: 1.0;
+}
+
+/* standard button [small] */
+.b0.small {
+    display: inline-block;
+    font-size:16px;
+    vertical-align:middle;
+    height:30px;
+    line-height: 100%;
+    padding:5px 10px; /*vertical horizontal*/
+}
+.b0.menu { }
+.b0.wfix50 {width: 50px;padding:5px 2px;}
+.b0.wfix60 {width: 60px;padding:5px 2px;}
+.b0.wfix70 {width: 70px;padding:5px 2px;}
+.b0.wfix80 {width: 80px;padding:5px 2px;}
+.b0.wfix90 {width: 90px;padding:5px 2px;}
+.b0.wfix100{width: 100px;padding:5px 2px;}
+.b0.wfix110{width: 110px;padding:5px 2px;}
+.b0.wfix120{width: 120px;padding:5px 2px;}
+.b0.wfix130{width: 130px;padding:5px 2px;}
+.b0.wfix140{width: 140px;padding:5px 2px;}
+.b0.wfix150{width: 150px;padding:5px 2px;}
+.b0.wfix160{width: 160px;padding:5px 2px;}
+.b0.wfix170{width: 170px;padding:5px 2px;}
+.b0.wfix180{width: 180px;padding:5px 2px;}
+.b0.wfix190{width: 190px;padding:5px 2px;}
+.b0.wfix200{width: 200px;padding:5px 2px;}
+.b0.wfixmax{width: 100%; padding:5px 2px;}
+
+/* standard button [selected] */
+.b0.sel {
+    /* opacity: 1.0; */
+    background-color: #039;
+	background: -moz-linear-gradient(top,#80CCE6,#80CCE6 5%,#09C 5%,#039 95%,#039 95%,#00293D);
+	background: -webkit-gradient(linear, left top, left bottom, from(#80CCE6), color-stop(0.05,#80CCE6), color-stop(0.05,#09C), color-stop(0.95,#039), color-stop(0.95,#00293D), to(#00293D));
+}
+
+/* standard button [orange] */
+.b0.red {
+    background-color: #960;
+	background: -moz-linear-gradient(top,#E6CC80,#E6CC80 5%,#C90 5%,#960 95%,#960 95%,#3D2900);
+	background: -webkit-gradient(linear, left top, left bottom, from(#E6CC80), color-stop(0.05,#E6CC80), color-stop(0.05,#C90), color-stop(0.95,#960), color-stop(0.95,#3D2900), to(#3D2900));
+}
+
+/* standard button [green] */
+.b0.green {
+    background-color: #086;
+	background: -moz-linear-gradient(top,#40E6AA,#40E6AA 5%,#0C9 5%,#086 95%,#086 95%,#003D29);
+	background: -webkit-gradient(linear, left top, left bottom, from(#40E6AA), color-stop(0.05,#40E6AA), color-stop(0.05,#0C9), color-stop(0.95,#086), color-stop(0.95,#003D29), to(#003D29));
+}
+
+/* standard button [blue] */
+.b0.blue {
+    background-color: #039;
+	background: -moz-linear-gradient(top,#4060E6,#4060E6 5%,#04C 5%,#039 95%,#039 95%,#00143D);
+	background: -webkit-gradient(linear, left top, left bottom, from(#4060E6), color-stop(0.05,#4060E6), color-stop(0.05,#04C), color-stop(0.95,#039), color-stop(0.95,#00143D), to(#00143D));
+}
+
+/* standard button [gray] */
+.b0.gray {
+    background-color: #ddd;
+	background: -moz-linear-gradient(top,#F0F0F0,#F0F0F0 5%,#ddd 5%,#666 95%,#666 95%,#303030);
+	background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), color-stop(0.05,#F0F0F0), color-stop(0.05,#ddd), color-stop(0.95,#666), color-stop(0.95,#303030), to(#303030));
+}
+
+
+/*input[type=button]#sound {*/
+.b1 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background: #fff;
+    width:60px;
+    font-size:12px;
+    font-weight:normal;
+    text-decoration:none;
+    display:inline;
+    position: absolute;
+    top:2px;
+    left:2px;
+    text-align:center;
+    padding:2px 0 2px;
+    margin: 0px 0px 2px 0px; /*上 右 下 左*/
+    color:#333;
+    border:1px solid #333;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		Composite Input
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+.divcomp {display:inline;}
+.divcomp input[type='radio']:checked + label {
+    color: #c90;
+}
+.divcomp input[type='radio']:checked + label.button {
+    background-color: #960;
+    background: -moz-linear-gradient(top,#E6CC80,#E6CC80 5%,#C90 5%,#960 95%,#960 95%,#3D2900);
+    background: -webkit-gradient(linear, left top, left bottom, from(#E6CC80), color-stop(0.05,#E6CC80), color-stop(0.05,#C90), color-stop(0.95,#960), color-stop(0.95,#3D2900), to(#3D2900));
+}
+.divcomp label {
+    cursor:pointer;
+    vertical-align: middle;
+}
+.divcomp label.button {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 10px 30px;
+    margin: 0px 2px 2px 0px;
+    height: 45px;
+    cursor:pointer;
+    vertical-align: middle;
+    opacity: 0.7;
+    background-color: #ddd;
+    background: -moz-linear-gradient(top,#F0F0F0,#F0F0F0 5%,#ddd 5%,#666 95%,#666 95%,#303030);
+    background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), color-stop(0.05,#F0F0F0), color-stop(0.05,#ddd), color-stop(0.95,#666), color-stop(0.95,#303030), to(#303030));
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		Class
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.contents_canvas {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+    display:none; /* for firefox*/
+    user-select: none;
+    -moz-user-select: none;    /* Firefox */
+    -webkit-user-select: none; /* Safari,Chrome */
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -ms-user-select: none;     /* IE10 */
+    -o-user-select: none;      /* opera */
+    background-color:rgba(0,0,0,0.5);
+}
+
+.starsky {
+    background: #094c72;
+    background: -webkit-radial-gradient(bottom, ellipse cover, #094c72 0%, #01293f 100%);
+    background: -webkit-radial-gradient(ellipse at bottom, #094c72 0%, #01293f 100%);
+    background: -webkit-radial-gradient(bottom, ellipse, #094c72 0%, #01293f 100%);
+    background: radial-gradient(ellipse at bottom, #094c72 0%, #01293f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#094c72', endColorstr='#01293f',GradientType=1 );
+}
+
+.statuswin_canvas {
+    position:relative;
+    vertical-align:middle;
+    background-color:rgba(0,0,0,0.5);
+    /* width: 300px; */
+    /* height: 50px; */
+    border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+    display:none; /* for firefox*/
+}
+
+.no_select {
+    user-select: none;
+    -moz-user-select: none;    /* Firefox */
+    -webkit-user-select: none; /* Safari,Chrome */
+    -ms-user-select: none;     /* IE10 */
+    -o-user-select: none;      /* opera */
+}
+
+.text_select {
+    user-select: text;
+    -moz-user-select: text;    /* Firefox */
+    -webkit-user-select: text; /* Safari,Chrome */
+    -ms-user-select: text;     /* IE10 */
+    -o-user-select: text;      /* opera */
+}
+
+.txt_box {
+	position: absolute;
+    top: 70px;
+    left:0;
+    right:0;
+    margin: auto;
+    width: 820px;
+    height: 800px;
+    padding: 0;
+    background-color:rgba(255,255,255,0.6);
+#    background-color:rgba(80,80,80,0.2);
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+    display: none; /* for firefox*/
+}
+.txt_box_inner {
+    display:table;
+    text-align:center;
+    background-color:#ffffff;
+    widht:800px;
+    height:auto;
+    padding: 20px;
+    margin: 0;
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+
+.txt1, .txt2, .txt3, .txt_head {
+	position: relative;
+	font-size: 20px;
+}
+.hint1, .hint2, .hint3 {
+	position: relative;
+	font-size: 20px;
+}
+.menu_hint {
+	position: relative;
+	font-size: 20px;
+    display:inline-block;
+    vertical-align:top;
+}
+.menu, .inline {
+    display:inline-block;
+    vertical-align:top;
+}
+.sound_volume {
+    position:absolute;
+    top:0px;
+    left:65px;
+    width:80px;
+}
+
+.radius5 {
+    border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.radius10 {
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.radius25 {
+    border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+.radius50p {
+    border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+.div_box_black {
+    width:400px;
+    background-color:#000;
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.blur {
+    background: inherit;
+    width:800px;
+    height:100%;
+    z-index:-1;
+}
+.blur:before {   
+    content: '';
+    background: inherit;
+    position: absolute;
+    z-index:-2;
+    left:-25px;
+    top:-25px;
+    right:0px;
+    bottom:0px;
+    width:850px;
+    height:110%;
+    /* box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3); */
+    box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.6);
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+
+/*
+ * common class
+ */
+.relative {
+	position: relative;
+}
+
+.err {
+	font-weight: bold;
+	color: #F00;
+}
+
+.w0 {
+    width: 800px;
+}
+.w1 {
+    width: 600px;
+}
+
+.w0d {
+    width: 800px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #fff;
+}
+.w0d:after {
+    width: 800px;
+	content: '';
+	display: block;
+	margin-top: 2px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #fff;
+}
+
+
+.h1 {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.h1_title {
+	vertical-align: bottom;
+	color: #000;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+
+.black_edge {
+  text-shadow: 
+    1px 1px 2px black, -1px -1px 2px black,
+    1px -1px 2px black, -1px 1px 2px black,
+    0px 1px 2px black, 1px 0px 2px black,
+    -1px 0px 2px black, 0px -1px 2px black;
+}
+
+.white_edge {
+  text-shadow: 
+    1px 1px 2px white, -1px -1px 2px white,
+    1px -1px 2px white, -1px 1px 2px white,
+    0px 1px 2px white, 1px 0px 2px white,
+    -1px 0px 2px white, 0px -1px 2px white;
+}
+
+.black_edge.transparent {
+  text-shadow: 
+    1px 1px 2px rgba(0,0,0,0.3), -1px -1px 2px rgba(0,0,0,0.3),
+    1px -1px 2px rgba(0,0,0,0.3), -1px 1px 2px rgba(0,0,0,0.3),
+    0px 1px 2px rgba(0,0,0,0.3), 1px 0px 2px rgba(0,0,0,0.3),
+    -1px 0px 2px rgba(0,0,0,0.3), 0px -1px 2px rgba(0,0,0,0.3);
+}
+.white {
+    color: white;
+}
+.white_edge.transparent {
+  text-shadow: 
+    1px 1px 2px rgba(255,255,255,0.3), -1px -1px 2px rgba(255,255,255,0.3),
+    1px -1px 2px rgba(255,255,255,0.3), -1px 1px 2px rgba(255,255,255,0.3),
+    0px 1px 2px rgba(255,255,255,0.3), 1px 0px 2px rgba(255,255,255,0.3),
+    -1px 0px 2px rgba(255,255,255,0.3), 0px -1px 2px rgba(255,255,255,0.3);
+}
+.black {
+    color: black;
+}
+
